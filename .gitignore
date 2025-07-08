@@ -1,0 +1,126 @@
+/.project
+/.asciidoctorconfig.adoc
+# asciidoctor : répértoire qui contient, par exemple, les fichiers de générations puml temporaires
+.asciidoctor
+
+######################
+# Windows
+######################
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+
+######################
+# Mac OSX
+######################
+.DS_Store 
+.DS_Store? 
+.Trashes 
+default.profraw
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+######################
+# Directories
+######################
+/bin/
+/deploy/
+
+######################
+# Logs
+######################
+*.log*
+# Exclusions générales  
+.*.swp 
+.#* 
+*~ 
+#*# 
+~$*.* 
+
+ 
+# Haskell + Cabal + Stack
+dist
+dist-*
+cabal-dev
+*.o
+*.hi
+*.hie
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+stack.yaml.lock
+cabal.project.local
+cabal.project.local~
+.HTF/
+.ghc.environment.*
+/.project
+
+
+######################
+# IDE
+######################
+### Gradle ###
+.gradle
+**/build/
+!src/**/build/
+
+
+### Eclipse ###
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+
+### Intellij+all Patch ###
+# Ignore everything but code style settings and run configurations
+# that are supposed to be shared within teams.
+
+.idea/*
+
+!.idea/codeStyles
+!.idea/runConfigurations
+
+# jsonSchemas.xml
+# - contient les configurations utiles pour pouvoir tester facilement les schémas JSON 
+# - configure les préférences : Languages & Frameworks -> Schemas and DTDs -> JSON Schema Mappings
+!.idea/jsonSchemas.xml
+
