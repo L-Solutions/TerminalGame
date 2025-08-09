@@ -33,9 +33,9 @@ darkCell :: Plane
 darkCell = invert $ color Black Dull $ cell ' '
 
 mark :: Plane
-mark = makeTransparent ' ' $ l1 === l2 === l3 === l4
-    where m1 = color Red Dull $ cell '\\'
-          m2 = color Red Dull $ cell '/'
+mark = makeTransparent ' ' $ l2 === l3
+    where m1 = cell '#'
+          m2 = cell '#'
           m0 = cell ' '
           l1 = m1 ||| m0 ||| m0 ||| m2
           l2 = m0 ||| m1 ||| m2 ||| m0
@@ -112,8 +112,11 @@ gameLogic _ (buf, coord) ev =
 -- Fonction de dessin : prend aussi GEnv
 draw :: GEnv -> GameState -> Plane
 draw _ (_, coord) = let label = (invert $ color Green Dull $ stringPlane version)
-                     in (drawCursor coord ||| (drawInfo coord & (5,2) % label)) === (board width height & (sizeY, sizeX) % mark)
-                     --in (board & coord % cell '@') ||| (drawInfo coord & (5,2) % label)
+                     in (drawCursor coord ||| (drawInfo coord & (5,2) % label))
+                        ===
+                        (board width height & (1, 2) % mark & (1 + sizeY, 2 + (sizeX + 1)) % mark)
+
+--
 -- Lancement du jeu
 main :: IO ()
 main = playGame Game
